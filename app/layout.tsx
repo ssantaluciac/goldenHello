@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Bullion Dynamics',
-  description: 'Precision Trading Made Simple, with Algorithmic Automation',
+  title: 'Golden Hello',
+  description: 'Asesores independientes de inversión',
 }
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <Navbar />
         <main>
