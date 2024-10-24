@@ -7,8 +7,11 @@ const signingKey = process.env.TYPEFORM_SIGNING_KEY || 'your-signing-key';
 export async function POST(req: NextRequest) {
   try {
     // Retrieve the signature and the raw body for verification
-    const signature = req.headers.get('typeform-signature');
+    const signatureHeader = req.headers.get('typeform-signature');
+    const signature = signatureHeader?.replace('sha256=', ''); // Extract the signature part
+
     const rawBody = await req.text(); // get the raw text body for hashing
+    
 
     // Hash the raw body with the Typeform signing key using SHA-256
     const hash = crypto
@@ -16,6 +19,8 @@ export async function POST(req: NextRequest) {
       .update(rawBody)
       .digest('hex');
 
+    console.log('Received Signature:', signature);
+    console.log('Generated Hash:', hash);
     // Compare the computed hash with the signature
     if (hash !== signature) {
       return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
