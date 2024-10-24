@@ -1,4 +1,4 @@
-# ShipFast — Javascript
+# ShipFast — Typescript
 
 Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your startup off the ground, FAST ⚡️
 
@@ -21,7 +21,7 @@ Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your
 
 ## Support
 
-Reach out at marc@shipfa.st
+Reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
 \_
 
