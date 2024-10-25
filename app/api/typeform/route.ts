@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const hash = crypto
       .createHmac('sha256', signingKey)
       .update(rawBody)
-      .digest('hex');
+      .digest('base64');
 
     console.log('Received Signature:', signature);
     console.log('Generated Hash:', hash);
